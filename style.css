@@ -1,47 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 
-/* =========================
+/* ==================================================
    VARIABLES
-========================= */
+================================================== */
 
 :root {
+
     --gold: #dca52f;
+
     --gold2: #f4c85c;
+
     --cream: #fff8df;
+
     --black: #050505;
+
     --muted: #bdb7aa;
+
 }
 
 
-/* =========================
+/* ==================================================
    GENERAL
-========================= */
+================================================== */
 
 * {
+
     box-sizing: border-box;
+
     scroll-behavior: smooth;
+
 }
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 85px;
+
+}
+
 
 body {
+
     margin: 0;
-    background: #050505;
+
+    background: var(--black);
+
     color: #fff;
-    font-family: Montserrat, Arial, sans-serif;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+
 }
 
 
-/* Fondo */
+/* ==================================================
+   FONDO
+================================================== */
 
-body:before {
+body::before {
+
     content: "";
 
     position: fixed;
+
     inset: 0;
 
     z-index: -2;
 
     background:
+
         radial-gradient(
             circle at 20% 0%,
             #2b210e 0,
@@ -55,20 +89,26 @@ body:before {
         ),
 
         #050505;
+
 }
 
 
-body:after {
+body::after {
+
     content: "";
 
     position: fixed;
+
     inset: 0;
 
     z-index: -1;
 
-    opacity: .10;
+    opacity: .08;
+
+    pointer-events: none;
 
     background-image:
+
         linear-gradient(
             135deg,
             transparent 0 46%,
@@ -77,32 +117,47 @@ body:after {
         );
 
     background-size: 520px 520px;
+
 }
 
 
-/* =========================
+/* ==================================================
    HEADER
-========================= */
+================================================== */
 
 header {
+
     position: sticky;
 
     top: 0;
 
-    z-index: 100;
+    z-index: 1000;
 
-    background: rgba(5, 5, 5, .90);
+    background:
+        rgba(5, 5, 5, .92);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(12px);
 
-    border-bottom: 1px solid #5f4517;
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    border-bottom:
+        1px solid #5f4517;
+
 }
 
 
 nav {
+
     max-width: 1100px;
 
     margin: auto;
+
+    padding:
+        10px 20px;
+
+    min-height: 70px;
 
     display: flex;
 
@@ -110,11 +165,11 @@ nav {
 
     justify-content: space-between;
 
-    padding: 12px 20px;
 }
 
 
 .brand {
+
     display: flex;
 
     align-items: center;
@@ -128,56 +183,87 @@ nav {
     font-weight: 800;
 
     letter-spacing: 2px;
+
 }
 
 
 .brand img {
-    width: 52px;
 
-    height: 52px;
+    width: 50px;
+
+    height: 50px;
 
     object-fit: contain;
 
     border-radius: 50%;
+
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    border: 1px solid #5f4517;
+
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
 }
 
 
 nav .links {
+
     display: flex;
 
     gap: 18px;
 
-    flex-wrap: wrap;
+    align-items: center;
 
-    justify-content: flex-end;
 }
 
 
-nav a {
+nav .links a {
+
     color: #fff;
 
     text-decoration: none;
 
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: 700;
 
     letter-spacing: 1px;
 
     text-transform: uppercase;
+
+    transition: .2s ease;
+
 }
 
 
-nav a:hover {
+nav .links a:hover {
+
     color: var(--gold2);
+
 }
 
 
-/* =========================
+/* ==================================================
    HERO
-========================= */
+================================================== */
 
 .hero {
+
     min-height: 88vh;
 
     display: grid;
@@ -186,31 +272,38 @@ nav a:hover {
 
     text-align: center;
 
-    padding: 70px 20px;
+    padding:
+        70px 20px;
 
     position: relative;
 
-    overflow: hidden;
 }
 
 
 .hero-inner {
+
     max-width: 850px;
+
 }
 
 
 .logo {
-    width: min(330px, 75vw);
+
+    width:
+        min(330px, 75vw);
 
     filter:
+
         drop-shadow(
             0 0 18px
-            rgba(220, 165, 47, .22)
+            rgba(220, 165, 47, .25)
         );
+
 }
 
 
 .kicker {
+
     color: var(--gold2);
 
     font-weight: 700;
@@ -219,14 +312,21 @@ nav a:hover {
 
     font-size: 13px;
 
-    margin: 18px 0;
+    margin:
+        18px 0;
+
 }
 
 
 .hero h1 {
-    font-family: "Bebas Neue", Impact, sans-serif;
 
-    font-size: clamp(54px, 10vw, 110px);
+    font-family:
+        "Bebas Neue",
+        Impact,
+        sans-serif;
+
+    font-size:
+        clamp(54px, 10vw, 110px);
 
     line-height: .9;
 
@@ -235,36 +335,57 @@ nav a:hover {
     text-transform: uppercase;
 
     letter-spacing: 3px;
+
 }
 
 
 .hero p {
+
     color: #d2cdc1;
 
     max-width: 600px;
 
-    margin: 22px auto;
+    margin:
+        25px auto;
 
     font-size: 15px;
 
     line-height: 1.7;
+
 }
 
 
-/* =========================
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+/* ==================================================
    BOTONES
-========================= */
+================================================== */
 
 .btn {
+
     display: inline-block;
 
-    padding: 14px 24px;
+    padding:
+        14px 24px;
 
-    border: 1px solid var(--gold);
+    border:
+        1px solid var(--gold);
 
     color: #080808;
 
-    background: var(--gold2);
+    background:
+        var(--gold2);
 
     font-weight: 800;
 
@@ -280,50 +401,63 @@ nav a:hover {
         0 0 20px
         rgba(220, 165, 47, .18);
 
-    transition: .25s;
+    transition:
+        .25s ease;
+
 }
 
 
 .btn:hover {
-    transform: translateY(-2px);
+
+    transform:
+        translateY(-2px);
 
     box-shadow:
         0 0 28px
         rgba(220, 165, 47, .35);
+
 }
 
 
 .btn.alt {
-    background: transparent;
+
+    background:
+        transparent;
 
     color: #fff;
 
-    margin-left: 8px;
 }
 
 
-/* =========================
+/* ==================================================
    SECCIONES
-========================= */
+================================================== */
 
 section {
+
     max-width: 1100px;
 
     margin: auto;
 
-    padding: 78px 20px;
+    padding:
+        78px 20px;
+
 }
 
 
 .section-title {
+
     text-align: center;
 
     margin-bottom: 42px;
+
 }
 
 
 .section-title .small {
-    color: var(--gold2);
+
+    color:
+        var(--gold2);
 
     font-size: 12px;
 
@@ -332,53 +466,90 @@ section {
     font-weight: 800;
 
     text-transform: uppercase;
+
 }
 
 
 .section-title h2 {
-    font-family: "Bebas Neue", Impact, sans-serif;
+
+    font-family:
+        "Bebas Neue",
+        Impact,
+        sans-serif;
 
     font-size: 58px;
 
     letter-spacing: 2px;
 
-    margin: 7px 0;
+    margin:
+        7px 0;
+
 }
 
 
 .section-title p {
-    color: var(--muted);
+
+    color:
+        var(--muted);
 
     max-width: 650px;
 
     margin: auto;
 
     line-height: 1.6;
+
 }
 
 
-/* =========================
+/* ==================================================
    CARTA
-========================= */
+================================================== */
 
 .grid {
+
     display: grid;
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 16px;
+    gap: 18px;
+
 }
 
 
+.category {
+
+    color:
+        var(--gold2);
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    margin:
+        38px 0 16px;
+
+}
+
+
+/* ==================================================
+   TARJETAS DE TRAGOS
+================================================== */
+
 .card {
+
     display: block;
 
     position: relative;
 
-    padding: 22px;
+    overflow: hidden;
 
-    border: 1px solid #4e3a18;
+    border:
+        1px solid #4e3a18;
 
     background:
         linear-gradient(
@@ -393,165 +564,42 @@ section {
 
     cursor: pointer;
 
-    transition: .25s;
+    transition:
+        .3s ease;
+
 }
 
 
 .card:hover {
-    border-color: var(--gold);
 
-    transform: translateY(-3px);
+    border-color:
+        var(--gold);
 
-    box-shadow:
-        0 0 20px
-        rgba(220,165,47,.10);
-}
-
-
-.card h3 {
-    font-size: 17px;
-
-    letter-spacing: 2px;
-
-    margin: 0 70px 7px 0;
-
-    text-transform: uppercase;
-}
-
-
-.card p {
-    color: #a9a39a;
-
-    font-size: 12px;
-
-    line-height: 1.55;
-
-    margin: 0 70px 0 0;
-}
-
-
-.price {
-    position: absolute;
-
-    right: 20px;
-
-    top: 21px;
-
-    color: var(--gold2);
-
-    font-weight: 800;
-}
-
-
-.category {
-    color: var(--gold2);
-
-    letter-spacing: 4px;
-
-    font-size: 13px;
-
-    font-weight: 800;
-
-    text-transform: uppercase;
-
-    margin: 38px 0 14px;
-}
-
-
-/* =========================
-   PROMOS
-========================= */
-
-.promos {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 18px;
-}
-
-
-.promo {
-    padding: 30px;
-
-    border: 1px solid var(--gold);
-
-    background: #090806;
+    transform:
+        translateY(-4px);
 
     box-shadow:
-        0 0 24px
-        rgba(220,165,47,.08);
+        0 10px 30px
+        rgba(220,165,47,.12);
 
-    transition: .25s;
 }
 
 
-.promo:hover {
-    transform: translateY(-3px);
-}
+.card-image {
 
+    width: 100%;
 
-.promo strong {
-    display: block;
-
-    font-family: "Bebas Neue";
-
-    font-size: 38px;
-
-    letter-spacing: 2px;
-
-    color: #fff;
-}
-
-
-.promo span {
-    display: block;
-
-    color: var(--gold2);
-
-    font-weight: 800;
-
-    font-size: 18px;
-
-    margin-top: 8px;
-}
-
-
-/* =========================
-   GALERÍA
-========================= */
-
-.gallery {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 12px;
-}
-
-
-.photo {
-    aspect-ratio: 1 / 1;
+    height: 230px;
 
     overflow: hidden;
 
-    border: 1px solid #4e3a18;
-
     background: #111;
 
-    position: relative;
-
-    display: block;
-
-    cursor: pointer;
-
-    text-decoration: none;
 }
 
 
-.photo img {
+.card-image img {
+
     width: 100%;
 
     height: 100%;
@@ -560,26 +608,287 @@ section {
 
     display: block;
 
-    transition: .35s;
+    transition:
+        transform .5s ease;
+
+}
+
+
+.card:hover
+.card-image img {
+
+    transform:
+        scale(1.06);
+
+}
+
+
+.card-info {
+
+    position: relative;
+
+    padding:
+        20px 20px 5px;
+
+}
+
+
+.card h3 {
+
+    font-size: 17px;
+
+    letter-spacing: 1.5px;
+
+    margin:
+        0 100px 5px 0;
+
+    text-transform: uppercase;
+
+}
+
+
+.price {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 20px;
+
+    color:
+        var(--gold2);
+
+    font-weight: 800;
+
+    font-size: 15px;
+
+}
+
+
+.card p {
+
+    color:
+        #aaa49a;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin:
+        8px 20px 0;
+
+}
+
+
+.view-drink {
+
+    display: inline-block;
+
+    color:
+        var(--gold2);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    margin:
+        16px 20px 20px;
+
+}
+
+
+/* ==================================================
+   PROMOS
+================================================== */
+
+.promos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.promo {
+
+    position: relative;
+
+    padding:
+        30px;
+
+    border:
+        1px solid var(--gold);
+
+    background:
+        #090806;
+
+    box-shadow:
+        0 0 24px
+        rgba(220,165,47,.08);
+
+    transition:
+        .25s ease;
+
+}
+
+
+.promo:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(220,165,47,.12);
+
+}
+
+
+.promo-icon {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 50px;
+
+    height: 50px;
+
+    border:
+        1px solid var(--gold);
+
+    color:
+        var(--gold2);
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+
+}
+
+
+.promo strong {
+
+    display: block;
+
+    font-family:
+        "Bebas Neue",
+        Impact,
+        sans-serif;
+
+    font-size: 38px;
+
+    letter-spacing: 2px;
+
+    color: #fff;
+
+}
+
+
+.promo span {
+
+    display: block;
+
+    color:
+        var(--gold2);
+
+    font-weight: 800;
+
+    font-size: 18px;
+
+    margin-top: 8px;
+
+}
+
+
+/* ==================================================
+   GALERÍA
+================================================== */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.photo {
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    border:
+        1px solid #4e3a18;
+
+    background:
+        #111;
+
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+}
+
+
+.photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        .4s ease;
+
 }
 
 
 .photo:hover {
-    border-color: var(--gold);
+
+    border-color:
+        var(--gold);
+
 }
 
 
 .photo:hover img {
-    transform: scale(1.06);
+
+    transform:
+        scale(1.07);
+
 }
 
 
-/* =========================
-   VISOR DE IMÁGENES
-   GALERÍA
-========================= */
+/* ==================================================
+   LIGHTBOX
+================================================== */
 
-.lightbox {
+.lightbox,
+.drink-lightbox {
+
     position: fixed;
 
     inset: 0;
@@ -601,111 +910,35 @@ section {
     transition:
         opacity .3s ease,
         visibility .3s ease;
+
 }
 
 
-.lightbox:target {
+.lightbox:target,
+.drink-lightbox:target {
+
     opacity: 1;
 
     visibility: visible;
+
 }
 
-
-/* Fondo clickeable */
 
 .lightbox-background {
+
     position: absolute;
 
     inset: 0;
 
-    background: rgba(0, 0, 0, .94);
+    background:
+        rgba(0,0,0,.95);
+
 }
 
 
-/* Contenido */
-
-.lightbox-content {
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 90vw;
-
-    max-height: 90vh;
-}
-
-
-.lightbox-content img {
-    display: block;
-
-    max-width: 90vw;
-
-    max-height: 85vh;
-
-    width: auto;
-
-    height: auto;
-
-    object-fit: contain;
-
-    border: 1px solid var(--gold);
-
-    box-shadow:
-        0 0 40px
-        rgba(220, 165, 47, .25);
-}
-
-
-/* =========================
-   VISOR DE TRAGOS
-========================= */
-
-.drink-lightbox {
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 9999;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 25px;
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    transition:
-        opacity .3s ease,
-        visibility .3s ease;
-}
-
-
-.drink-lightbox:target {
-    opacity: 1;
-
-    visibility: visible;
-}
-
-
-/* Fondo negro */
-
-.drink-lightbox .lightbox-background {
-    position: absolute;
-
-    inset: 0;
-
-    background: rgba(0, 0, 0, .94);
-}
-
-
-/* Contenedor */
-
+.lightbox-content,
 .drink-content {
+
     position: relative;
 
     z-index: 2;
@@ -713,12 +946,13 @@ section {
     max-width: 90vw;
 
     max-height: 90vh;
+
 }
 
 
-/* Imagen del trago */
-
+.lightbox-content img,
 .drink-content img {
+
     display: block;
 
     max-width: 90vw;
@@ -731,26 +965,33 @@ section {
 
     object-fit: contain;
 
-    border: 1px solid var(--gold);
+    border:
+        1px solid var(--gold);
 
     box-shadow:
         0 0 40px
-        rgba(220, 165, 47, .25);
+        rgba(220,165,47,.25);
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
 }
 
 
-/* =========================
-   BOTÓN X
-========================= */
+/* ==================================================
+   BOTÓN CERRAR
+================================================== */
 
 .close {
+
     position: absolute;
 
     top: -45px;
 
     right: 0;
 
-    z-index: 5;
+    z-index: 30;
 
     color: #fff;
 
@@ -760,115 +1001,52 @@ section {
 
     line-height: 1;
 
-    transition: .2s;
+    transition:
+        .2s ease;
+
 }
 
 
 .close:hover {
-    color: var(--gold2);
 
-    transform: scale(1.1);
+    color:
+        var(--gold2);
+
+    transform:
+        scale(1.1);
+
 }
 
 
-/* =========================
-   CONTACTO
-========================= */
-.instagram-link {
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.instagram-link:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-
-.contact {
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 20px;
-}
-
-
-.contact-box {
-    border: 1px solid #4e3a18;
-
-    padding: 28px;
-}
-
-
-.contact-box h3 {
-    font-family: "Bebas Neue";
-
-    font-size: 32px;
-
-    margin: 0 0 12px;
-
-    color: var(--gold2);
-}
-
-
-.contact-box p {
-    color: #c8c2b8;
-
-    line-height: 1.8;
-
-    margin: 0;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    border-top: 1px solid #4e3a18;
-
-    text-align: center;
-
-    padding: 35px 20px;
-
-    color: #8e887d;
-
-    font-size: 12px;
-}
-
-
-footer b {
-    color: var(--gold2);
-}
-/* =========================
-   NAVEGACIÓN DE GALERÍA
-========================= */
-
-.lightbox-content {
-    position: relative;
-}
-
-/* Botones anterior y siguiente */
+/* ==================================================
+   BOTONES GALERÍA
+================================================== */
 
 .gallery-prev,
 .gallery-next {
+
     position: absolute;
+
     top: 50%;
-    transform: translateY(-50%);
+
+    transform:
+        translateY(-50%);
 
     width: 50px;
+
     height: 50px;
 
     border: none;
+
     border-radius: 50%;
 
-    background: rgba(0, 0, 0, 0.65);
+    background:
+        rgba(0,0,0,.65);
+
     color: white;
 
     font-size: 40px;
+
     line-height: 40px;
 
     cursor: pointer;
@@ -876,167 +1054,637 @@ footer b {
     z-index: 20;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    transition: 0.2s ease;
+    transition:
+        .2s ease;
+
 }
+
 
 .gallery-prev:hover,
 .gallery-next:hover {
-    background: rgba(0, 0, 0, 0.9);
-    transform: translateY(-50%) scale(1.08);
+
+    background:
+        rgba(0,0,0,.9);
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+
 }
+
 
 .gallery-prev {
+
     left: 15px;
+
 }
+
 
 .gallery-next {
+
     right: 15px;
+
 }
 
 
-/* =========================
-   IMAGEN DEL VISOR
-========================= */
+/* ==================================================
+   CONTADOR
+================================================== */
 
-.lightbox-content img {
-    max-width: 90vw;
-    max-height: 85vh;
+.image-counter {
 
-    object-fit: contain;
+    position: absolute;
 
-    user-select: none;
-    -webkit-user-drag: none;
+    bottom: -32px;
 
-    touch-action: pan-y;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color:
+        #aaa;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
 }
 
 
-/* =========================
+/* ==================================================
+   CONTACTO
+================================================== */
+
+.contact {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+.contact-box {
+
+    border:
+        1px solid #4e3a18;
+
+    padding:
+        28px;
+
+    background:
+        rgba(255,255,255,.015);
+
+}
+
+
+.contact-box h3 {
+
+    font-family:
+        "Bebas Neue",
+        Impact,
+        sans-serif;
+
+    font-size: 32px;
+
+    margin:
+        0 0 12px;
+
+    color:
+        var(--gold2);
+
+}
+
+
+.contact-box p {
+
+    color:
+        #c8c2b8;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+}
+
+
+.contact-link {
+
+    color:
+        #c8c2b8;
+
+    text-decoration: none;
+
+}
+
+
+.contact-link:hover {
+
+    color:
+        var(--gold2);
+
+}
+
+
+.instagram-link {
+
+    color:
+        #d4af37;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+}
+
+
+.instagram-link:hover {
+
+    color:
+        #fff;
+
+    text-decoration: underline;
+
+}
+
+
+.whatsapp-btn {
+
+    margin-top: 5px;
+
+}
+
+
+/* ==================================================
+   BOTÓN VOLVER ARRIBA
+================================================== */
+
+.back-to-top {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        var(--gold2);
+
+    color:
+        #080808;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.4);
+
+    z-index: 500;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.back-to-top:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+    border-top:
+        1px solid #4e3a18;
+
+    text-align:
+        center;
+
+    padding:
+        35px 20px;
+
+    color:
+        #8e887d;
+
+    font-size:
+        12px;
+
+}
+
+
+footer b {
+
+    color:
+        var(--gold2);
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 800px) {
+
+    .grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* ==================================================
    CELULAR
-========================= */
-
-@media (max-width: 768px) {
-
-    .gallery-prev,
-    .gallery-next {
-        width: 42px;
-        height: 42px;
-
-        font-size: 32px;
-    }
-
-    .gallery-prev {
-        left: 8px;
-    }
-
-    .gallery-next {
-        right: 8px;
-    }
-
-    .lightbox-content img {
-        max-width: 92vw;
-        max-height: 78vh;
-    }
-}
-
-/* =========================
-   CELULAR
-========================= */
+================================================== */
 
 @media (max-width: 700px) {
 
     nav {
-        align-items: flex-start;
+
+        min-height: 62px;
+
+        padding:
+            9px 15px;
+
     }
 
 
     .brand span {
+
         display: none;
+
+    }
+
+
+    .brand img {
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
     }
 
 
     nav .links {
-        gap: 10px;
+
+        position: absolute;
+
+        top: 62px;
+
+        left: 0;
+
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background:
+            rgba(5,5,5,.98);
+
+        border-bottom:
+            1px solid #5f4517;
+
     }
 
 
-    nav a {
-        font-size: 10px;
+    nav .links.active {
+
+        display: flex;
+
+    }
+
+
+    nav .links a {
+
+        padding:
+            16px 20px;
+
+        border-bottom:
+            1px solid #211a0c;
+
+        text-align: center;
+
     }
 
 
     .hero {
-        min-height: 78vh;
 
-        padding-top: 45px;
+        min-height:
+            78vh;
+
+        padding:
+            50px 18px;
+
+    }
+
+
+    .logo {
+
+        width:
+            min(280px, 78vw);
+
+    }
+
+
+    .kicker {
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(55px, 17vw, 85px);
+
+    }
+
+
+    .hero p {
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .btn {
+
+        width:
+            min(280px, 90vw);
+
+        text-align:
+            center;
+
+    }
+
+
+    section {
+
+        padding:
+            60px 15px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size:
+            48px;
+
     }
 
 
     .grid,
     .promos,
     .contact {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .card-image {
+
+        height:
+            250px;
+
     }
 
 
     .gallery {
+
         grid-template-columns:
             repeat(2, 1fr);
+
+        gap: 8px;
+
     }
 
-
-    .section-title h2 {
-        font-size: 48px;
-    }
-
-
-    .card p {
-        margin-right: 55px;
-    }
-
-
-    .btn {
-        display: block;
-
-        margin: 8px auto !important;
-
-        max-width: 280px;
-    }
-
-
-    /* Visores en celular */
 
     .lightbox,
     .drink-lightbox {
-        padding: 15px;
-    }
 
+        padding:
+            15px;
 
-    .lightbox-content,
-    .drink-content {
-        max-width: 95vw;
-
-        max-height: 90vh;
     }
 
 
     .lightbox-content img,
     .drink-content img {
-        max-width: 95vw;
 
-        max-height: 82vh;
+        max-width:
+            95vw;
+
+        max-height:
+            80vh;
+
+    }
+
+
+    .gallery-prev,
+    .gallery-next {
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            32px;
+
+    }
+
+
+    .gallery-prev {
+
+        left:
+            7px;
+
+    }
+
+
+    .gallery-next {
+
+        right:
+            7px;
+
     }
 
 
     .close {
-        top: -38px;
 
-        font-size: 27px;
+        top:
+            -38px;
+
+        font-size:
+            27px;
+
+    }
+
+
+    .back-to-top {
+
+        right:
+            15px;
+
+        bottom:
+            15px;
+
+        width:
+            42px;
+
+        height:
+            42px;
+
     }
 
 }
 
+
+/* ==================================================
+   CELULAR PEQUEÑO
+================================================== */
+
+@media (max-width: 480px) {
+
+    .hero {
+
+        min-height:
+            75vh;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size:
+            44px;
+
+    }
+
+
+    .card-image {
+
+        height:
+            220px;
+
+    }
+
+
+    .card h3 {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .price {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .promo {
+
+        padding:
+            24px;
+
+    }
+
+
+    .promo strong {
+
+        font-size:
+            32px;
+
+    }
+
+
+    .gallery-prev,
+    .gallery-next {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        font-size:
+            28px;
+
+    }
+
+}
 
