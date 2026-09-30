@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap');
+/* ==================================================
+   FUENTES
+================================================== */
+
+@import url(
+    'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap'
+);
+
 
 
 /* ==================================================
@@ -18,6 +25,7 @@
     --muted: #bdb7aa;
 
 }
+
 
 
 /* ==================================================
@@ -50,14 +58,12 @@ body {
 
     color: #fff;
 
-    font-family:
-        "Montserrat",
-        Arial,
-        sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
 
     overflow-x: hidden;
 
 }
+
 
 
 /* ==================================================
@@ -121,6 +127,7 @@ body::after {
 }
 
 
+
 /* ==================================================
    HEADER
 ================================================== */
@@ -154,8 +161,7 @@ nav {
 
     margin: auto;
 
-    padding:
-        10px 20px;
+    padding: 10px 20px;
 
     min-height: 70px;
 
@@ -258,6 +264,7 @@ nav .links a:hover {
 }
 
 
+
 /* ==================================================
    HERO
 ================================================== */
@@ -272,8 +279,7 @@ nav .links a:hover {
 
     text-align: center;
 
-    padding:
-        70px 20px;
+    padding: 70px 20px;
 
     position: relative;
 
@@ -289,11 +295,9 @@ nav .links a:hover {
 
 .logo {
 
-    width:
-        min(330px, 75vw);
+    width: min(330px, 75vw);
 
     filter:
-
         drop-shadow(
             0 0 18px
             rgba(220, 165, 47, .25)
@@ -312,8 +316,7 @@ nav .links a:hover {
 
     font-size: 13px;
 
-    margin:
-        18px 0;
+    margin: 18px 0;
 
 }
 
@@ -345,8 +348,7 @@ nav .links a:hover {
 
     max-width: 600px;
 
-    margin:
-        25px auto;
+    margin: 25px auto;
 
     font-size: 15px;
 
@@ -368,6 +370,7 @@ nav .links a:hover {
 }
 
 
+
 /* ==================================================
    BOTONES
 ================================================== */
@@ -376,16 +379,13 @@ nav .links a:hover {
 
     display: inline-block;
 
-    padding:
-        14px 24px;
+    padding: 14px 24px;
 
-    border:
-        1px solid var(--gold);
+    border: 1px solid var(--gold);
 
     color: #080808;
 
-    background:
-        var(--gold2);
+    background: var(--gold2);
 
     font-weight: 800;
 
@@ -401,8 +401,7 @@ nav .links a:hover {
         0 0 20px
         rgba(220, 165, 47, .18);
 
-    transition:
-        .25s ease;
+    transition: .25s ease;
 
 }
 
@@ -421,12 +420,12 @@ nav .links a:hover {
 
 .btn.alt {
 
-    background:
-        transparent;
+    background: transparent;
 
     color: #fff;
 
 }
+
 
 
 /* ==================================================
@@ -439,8 +438,7 @@ section {
 
     margin: auto;
 
-    padding:
-        78px 20px;
+    padding: 78px 20px;
 
 }
 
@@ -456,8 +454,7 @@ section {
 
 .section-title .small {
 
-    color:
-        var(--gold2);
+    color: var(--gold2);
 
     font-size: 12px;
 
@@ -481,16 +478,14 @@ section {
 
     letter-spacing: 2px;
 
-    margin:
-        7px 0;
+    margin: 7px 0;
 
 }
 
 
 .section-title p {
 
-    color:
-        var(--muted);
+    color: var(--muted);
 
     max-width: 650px;
 
@@ -501,8 +496,9 @@ section {
 }
 
 
+
 /* ==================================================
-   CARTA
+   GRILLA
 ================================================== */
 
 .grid {
@@ -517,10 +513,14 @@ section {
 }
 
 
+
+/* ==================================================
+   CATEGORÍAS
+================================================== */
+
 .category {
 
-    color:
-        var(--gold2);
+    color: var(--gold2);
 
     letter-spacing: 4px;
 
@@ -530,14 +530,14 @@ section {
 
     text-transform: uppercase;
 
-    margin:
-        38px 0 16px;
+    margin: 38px 0 16px;
 
 }
 
 
+
 /* ==================================================
-   TARJETAS DE TRAGOS
+   TARJETAS
 ================================================== */
 
 .card {
@@ -564,8 +564,7 @@ section {
 
     cursor: pointer;
 
-    transition:
-        .3s ease;
+    transition: .3s ease;
 
 }
 
@@ -584,6 +583,11 @@ section {
 
 }
 
+
+
+/* ==================================================
+   IMÁGENES DE TARJETAS
+================================================== */
 
 .card-image {
 
@@ -623,6 +627,11 @@ section {
 }
 
 
+
+/* ==================================================
+   INFORMACIÓN DE TARJETAS
+================================================== */
+
 .card-info {
 
     position: relative;
@@ -655,8 +664,7 @@ section {
 
     top: 20px;
 
-    color:
-        var(--gold2);
+    color: var(--gold2);
 
     font-weight: 800;
 
@@ -667,8 +675,7 @@ section {
 
 .card p {
 
-    color:
-        #aaa49a;
+    color: #aaa49a;
 
     font-size: 12px;
 
@@ -684,8 +691,7 @@ section {
 
     display: inline-block;
 
-    color:
-        var(--gold2);
+    color: var(--gold2);
 
     font-size: 10px;
 
@@ -701,8 +707,9 @@ section {
 }
 
 
+
 /* ==================================================
-   PROMOS
+   PROMOCIONES
 ================================================== */
 
 .promos {
@@ -721,21 +728,18 @@ section {
 
     position: relative;
 
-    padding:
-        30px;
+    padding: 30px;
 
     border:
         1px solid var(--gold);
 
-    background:
-        #090806;
+    background: #090806;
 
     box-shadow:
         0 0 24px
         rgba(220,165,47,.08);
 
-    transition:
-        .25s ease;
+    transition: .25s ease;
 
 }
 
@@ -767,8 +771,7 @@ section {
     border:
         1px solid var(--gold);
 
-    color:
-        var(--gold2);
+    color: var(--gold2);
 
     font-weight: 800;
 
@@ -799,8 +802,7 @@ section {
 
     display: block;
 
-    color:
-        var(--gold2);
+    color: var(--gold2);
 
     font-weight: 800;
 
@@ -809,6 +811,7 @@ section {
     margin-top: 8px;
 
 }
+
 
 
 /* ==================================================
@@ -836,8 +839,7 @@ section {
     border:
         1px solid #4e3a18;
 
-    background:
-        #111;
+    background: #111;
 
     position: relative;
 
@@ -860,8 +862,7 @@ section {
 
     display: block;
 
-    transition:
-        .4s ease;
+    transition: .4s ease;
 
 }
 
@@ -880,6 +881,7 @@ section {
         scale(1.07);
 
 }
+
 
 
 /* ==================================================
@@ -907,22 +909,38 @@ section {
 
     visibility: hidden;
 
+    pointer-events: none;
+
     transition:
-        opacity .3s ease,
-        visibility .3s ease;
+        opacity .25s ease,
+        visibility .25s ease;
 
 }
 
 
-.lightbox:target,
+.lightbox.active,
 .drink-lightbox:target {
 
     opacity: 1;
 
     visibility: visible;
 
+    pointer-events: auto;
+
 }
 
+
+body.gallery-open {
+
+    overflow: hidden;
+
+}
+
+
+
+/* ==================================================
+   FONDO LIGHTBOX
+================================================== */
 
 .lightbox-background {
 
@@ -931,10 +949,17 @@ section {
     inset: 0;
 
     background:
-        rgba(0,0,0,.95);
+        rgba(0,0,0,.96);
+
+    cursor: pointer;
 
 }
 
+
+
+/* ==================================================
+   CONTENIDO LIGHTBOX
+================================================== */
 
 .lightbox-content,
 .drink-content {
@@ -946,6 +971,12 @@ section {
     max-width: 90vw;
 
     max-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 
 }
 
@@ -974,13 +1005,16 @@ section {
 
     user-select: none;
 
+    -webkit-user-select: none;
+
     -webkit-user-drag: none;
 
 }
 
 
+
 /* ==================================================
-   BOTÓN CERRAR
+   CERRAR
 ================================================== */
 
 .close {
@@ -995,22 +1029,26 @@ section {
 
     color: #fff;
 
+    background: transparent;
+
+    border: none;
+
     text-decoration: none;
 
-    font-size: 30px;
+    font-size: 34px;
 
     line-height: 1;
 
-    transition:
-        .2s ease;
+    cursor: pointer;
+
+    transition: .2s ease;
 
 }
 
 
 .close:hover {
 
-    color:
-        var(--gold2);
+    color: var(--gold2);
 
     transform:
         scale(1.1);
@@ -1018,40 +1056,42 @@ section {
 }
 
 
+
 /* ==================================================
-   BOTONES GALERÍA
+   FLECHAS
 ================================================== */
 
 .gallery-prev,
 .gallery-next {
 
-    position: absolute;
+    position: fixed;
 
     top: 50%;
 
     transform:
         translateY(-50%);
 
-    width: 50px;
+    width: 52px;
 
-    height: 50px;
+    height: 52px;
 
-    border: none;
+    border:
+        1px solid var(--gold);
 
     border-radius: 50%;
 
     background:
-        rgba(0,0,0,.65);
+        rgba(5,5,5,.85);
 
-    color: white;
+    color: var(--gold2);
 
-    font-size: 40px;
+    font-size: 38px;
 
-    line-height: 40px;
+    line-height: 1;
 
     cursor: pointer;
 
-    z-index: 20;
+    z-index: 10001;
 
     display: flex;
 
@@ -1059,8 +1099,21 @@ section {
 
     justify-content: center;
 
-    transition:
-        .2s ease;
+    transition: .2s ease;
+
+}
+
+
+.gallery-prev {
+
+    left: 20px;
+
+}
+
+
+.gallery-next {
+
+    right: 20px;
 
 }
 
@@ -1069,7 +1122,9 @@ section {
 .gallery-next:hover {
 
     background:
-        rgba(0,0,0,.9);
+        var(--gold2);
+
+    color: #050505;
 
     transform:
         translateY(-50%)
@@ -1077,19 +1132,6 @@ section {
 
 }
 
-
-.gallery-prev {
-
-    left: 15px;
-
-}
-
-
-.gallery-next {
-
-    right: 15px;
-
-}
 
 
 /* ==================================================
@@ -1107,14 +1149,16 @@ section {
     transform:
         translateX(-50%);
 
-    color:
-        #aaa;
+    color: #aaa;
 
     font-size: 12px;
 
     letter-spacing: 1px;
 
+    white-space: nowrap;
+
 }
+
 
 
 /* ==================================================
@@ -1138,8 +1182,7 @@ section {
     border:
         1px solid #4e3a18;
 
-    padding:
-        28px;
+    padding: 28px;
 
     background:
         rgba(255,255,255,.015);
@@ -1159,16 +1202,14 @@ section {
     margin:
         0 0 12px;
 
-    color:
-        var(--gold2);
+    color: var(--gold2);
 
 }
 
 
 .contact-box p {
 
-    color:
-        #c8c2b8;
+    color: #c8c2b8;
 
     line-height: 1.8;
 
@@ -1179,8 +1220,7 @@ section {
 
 .contact-link {
 
-    color:
-        #c8c2b8;
+    color: #c8c2b8;
 
     text-decoration: none;
 
@@ -1189,16 +1229,14 @@ section {
 
 .contact-link:hover {
 
-    color:
-        var(--gold2);
+    color: var(--gold2);
 
 }
 
 
 .instagram-link {
 
-    color:
-        #d4af37;
+    color: #d4af37;
 
     text-decoration: none;
 
@@ -1209,8 +1247,7 @@ section {
 
 .instagram-link:hover {
 
-    color:
-        #fff;
+    color: #fff;
 
     text-decoration: underline;
 
@@ -1224,8 +1261,9 @@ section {
 }
 
 
+
 /* ==================================================
-   BOTÓN VOLVER ARRIBA
+   VOLVER ARRIBA
 ================================================== */
 
 .back-to-top {
@@ -1246,11 +1284,9 @@ section {
 
     justify-content: center;
 
-    background:
-        var(--gold2);
+    background: var(--gold2);
 
-    color:
-        #080808;
+    color: #080808;
 
     text-decoration: none;
 
@@ -1266,8 +1302,7 @@ section {
 
     z-index: 500;
 
-    transition:
-        .25s ease;
+    transition: .25s ease;
 
 }
 
@@ -1280,6 +1315,7 @@ section {
 }
 
 
+
 /* ==================================================
    FOOTER
 ================================================== */
@@ -1289,27 +1325,23 @@ footer {
     border-top:
         1px solid #4e3a18;
 
-    text-align:
-        center;
+    text-align: center;
 
-    padding:
-        35px 20px;
+    padding: 35px 20px;
 
-    color:
-        #8e887d;
+    color: #8e887d;
 
-    font-size:
-        12px;
+    font-size: 12px;
 
 }
 
 
 footer b {
 
-    color:
-        var(--gold2);
+    color: var(--gold2);
 
 }
+
 
 
 /* ==================================================
@@ -1320,8 +1352,7 @@ footer b {
 
     .grid {
 
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
     }
 
@@ -1336,11 +1367,13 @@ footer b {
 }
 
 
+
 /* ==================================================
    CELULAR
 ================================================== */
 
 @media (max-width: 700px) {
+
 
     nav {
 
@@ -1411,8 +1444,7 @@ footer b {
 
     nav .links a {
 
-        padding:
-            16px 20px;
+        padding: 16px 20px;
 
         border-bottom:
             1px solid #211a0c;
@@ -1424,8 +1456,7 @@ footer b {
 
     .hero {
 
-        min-height:
-            78vh;
+        min-height: 78vh;
 
         padding:
             50px 18px;
@@ -1467,8 +1498,7 @@ footer b {
 
     .hero-buttons {
 
-        flex-direction:
-            column;
+        flex-direction: column;
 
     }
 
@@ -1478,8 +1508,7 @@ footer b {
         width:
             min(280px, 90vw);
 
-        text-align:
-            center;
+        text-align: center;
 
     }
 
@@ -1494,8 +1523,7 @@ footer b {
 
     .section-title h2 {
 
-        font-size:
-            48px;
+        font-size: 48px;
 
     }
 
@@ -1504,16 +1532,14 @@ footer b {
     .promos,
     .contact {
 
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
     }
 
 
     .card-image {
 
-        height:
-            250px;
+        height: 250px;
 
     }
 
@@ -1531,8 +1557,7 @@ footer b {
     .lightbox,
     .drink-lightbox {
 
-        padding:
-            15px;
+        padding: 15px;
 
     }
 
@@ -1540,11 +1565,9 @@ footer b {
     .lightbox-content img,
     .drink-content img {
 
-        max-width:
-            95vw;
+        max-width: 95vw;
 
-        max-height:
-            80vh;
+        max-height: 80vh;
 
     }
 
@@ -1552,62 +1575,52 @@ footer b {
     .gallery-prev,
     .gallery-next {
 
-        width:
-            42px;
+        width: 42px;
 
-        height:
-            42px;
+        height: 42px;
 
-        font-size:
-            32px;
+        font-size: 30px;
 
     }
 
 
     .gallery-prev {
 
-        left:
-            7px;
+        left: 8px;
 
     }
 
 
     .gallery-next {
 
-        right:
-            7px;
+        right: 8px;
 
     }
 
 
     .close {
 
-        top:
-            -38px;
+        top: -38px;
 
-        font-size:
-            27px;
+        font-size: 30px;
 
     }
 
 
     .back-to-top {
 
-        right:
-            15px;
+        right: 15px;
 
-        bottom:
-            15px;
+        bottom: 15px;
 
-        width:
-            42px;
+        width: 42px;
 
-        height:
-            42px;
+        height: 42px;
 
     }
 
 }
+
 
 
 /* ==================================================
@@ -1616,58 +1629,52 @@ footer b {
 
 @media (max-width: 480px) {
 
+
     .hero {
 
-        min-height:
-            75vh;
+        min-height: 75vh;
 
     }
 
 
     .section-title h2 {
 
-        font-size:
-            44px;
+        font-size: 44px;
 
     }
 
 
     .card-image {
 
-        height:
-            220px;
+        height: 220px;
 
     }
 
 
     .card h3 {
 
-        font-size:
-            15px;
+        font-size: 15px;
 
     }
 
 
     .price {
 
-        font-size:
-            14px;
+        font-size: 14px;
 
     }
 
 
     .promo {
 
-        padding:
-            24px;
+        padding: 24px;
 
     }
 
 
     .promo strong {
 
-        font-size:
-            32px;
+        font-size: 32px;
 
     }
 
@@ -1675,14 +1682,11 @@ footer b {
     .gallery-prev,
     .gallery-next {
 
-        width:
-            38px;
+        width: 38px;
 
-        height:
-            38px;
+        height: 38px;
 
-        font-size:
-            28px;
+        font-size: 27px;
 
     }
 
